@@ -1,5 +1,5 @@
-# expense-tracker-team-14
-Expense Tracker.
+# Expense-tracker-team-14
+
 
 Expense Tracker is a user-friendly software for personal financial management. 
 Features within Expense Tracker are well integrated. 
