@@ -1,0 +1,61 @@
+<div class="container-fluid">
+  <div class="row" style="height: 100vh">
+  
+    <div
+      class="col bg-info
+       d-flex flex-column justify-content-center align-items-center" 
+    >
+      <div>
+        <fa-icon [icon]="faAirFreshener" style="font-size: 54px"></fa-icon>
+      </div>
+      
+      <div class="h3">Welcome to Expense Tracker!</div>
+      <div class="h6">
+        Track Your Expenses Here!
+      </div>
+    </div>
+
+  
+    <div
+    
+      class="col bg-light d-flex flex-column justify-content-center align-items-center"
+      [formGroup]="fbFormGroup"
+    >
+      <div class="alert alert-danger" role="alert" *ngIf="uiInvalidCredential">
+        A simple danger alert—check it out!
+      </div>
+
+      <div class="text-dark mb-3" style="font-family: cursive; font-size:40px">
+        Expense Tracker
+    </div>
+     
+      <div>
+        <input
+          type="text"
+          placeholder="Enter Username"
+          class="form-control"
+          formControlName="username"
+        />
+      </div>
+
+      <div class="mt-1">
+        <input
+          type="password"
+          placeholder="Enter Password"
+          class="form-control"
+          formControlName="password"
+        />
+      </div>
+
+      <button
+        class="btn btn-sm btn-warning mt-2 mb-2"
+        [disabled]="!fbFormGroup.valid"
+        (click)="loginProcessHere()"
+      >
+        Login Here
+      </button>
+
+      <a routerLink="/register" style=" font-size: large;font-family:bold">Register Here</a>
+    </div>
+  </div>
+</div>
